@@ -62,4 +62,11 @@ public class GastoMensal extends Gasto implements Serializable {
 		this.modalidade = modalidade;
 	}
 
+	@Override
+	public String toString() {
+		return "GastoMensal [dataCompra=" + dataCompra + ", quantidadeParcela=" + quantidadeParcela
+				+ ", apelidoFormaPagamentoUtilizado=" + apelidoFormaPagamentoUtilizado + ", modalidade=" + modalidade
+				+ "]";
+	}
+
 }
