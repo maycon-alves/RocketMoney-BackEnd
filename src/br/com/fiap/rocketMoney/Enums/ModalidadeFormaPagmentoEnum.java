@@ -30,5 +30,7 @@ public enum ModalidadeFormaPagmentoEnum {
 	public String getDescricaoModalidadeFormaPagamento() {
 		return descricaoModalidadeFormaPagamento;
 	}
+	
+	// TODO implementar metodo toString para retornar a lista de opções para o cliente no front
 
 }
