@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import br.com.fiap.rocketMoney.Enums.CategoriaGastoEnum;
 
-public class Gasto implements Serializable {
+public abstract class Gasto implements Serializable {
 
 	/**
 	 * 
@@ -14,9 +14,9 @@ public class Gasto implements Serializable {
 	private Double valorGasto;
 	private String descricaoGasto;
 	private CategoriaGastoEnum categoriaGasto;
-
+	
 	public Gasto() {
-
+		
 	}
 
 	public Gasto(String idGasto, Double valorGasto, String descricaoGasto, CategoriaGastoEnum categoriaGasto) {
@@ -60,8 +60,8 @@ public class Gasto implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Gasto [idGasto=" + idGasto + ", valorGasto=" + valorGasto + ", descricaoGasto=" + descricaoGasto
-				+ ", categoriaGasto=" + categoriaGasto + "]";
+		return "idGasto=" + idGasto + ", valorGasto=" + valorGasto + ", descricaoGasto=" + descricaoGasto
+				+ ", categoriaGasto=" + categoriaGasto;
 	}
 
 }

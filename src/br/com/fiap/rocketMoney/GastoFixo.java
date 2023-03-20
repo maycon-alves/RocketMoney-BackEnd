@@ -18,10 +18,8 @@ public class GastoFixo extends Gasto implements Serializable {
 	public GastoFixo() {
 
 	}
-
-	public GastoFixo(String idGasto, Double valorGasto, String descricaoGasto, CategoriaGastoEnum categoriaGasto,
-			int diaLancamento, PeriodoVencimentoEnum periodo) {
-		super(idGasto, valorGasto, descricaoGasto, categoriaGasto);
+	
+	public GastoFixo(int diaLancamento, PeriodoVencimentoEnum periodo) {
 		this.diaLancamento = diaLancamento;
 		this.periodo = periodo;
 	}
@@ -44,7 +42,8 @@ public class GastoFixo extends Gasto implements Serializable {
 
 	@Override
 	public String toString() {
-		return "GastoFixo [diaLancamento=" + diaLancamento + ", periodo=" + periodo + "]";
+		return "GastoFixo [diaLancamento=" + diaLancamento + ", periodo=" + periodo + ", " + super.toString() + "]";
 	}
+	
 
 }

@@ -8,7 +8,7 @@ package br.com.fiap.rocketMoney.Enums;
  *
  */
 public enum CategoriaGastoEnum {
-	ALIMENTACAO("Alimentação"), SAUDE("Saúde"), LAZER("Lazer"), IMPULSO("Impulso"), DESPESAFIXA("Despesa Fixa"),
+	ALIMENTACAO("Alimentação"), SAUDE("Saúde"), LAZER("Lazer"), IMPULSO("Impulso"), DESPESA_FIXA("Despesa Fixa"),
 	IMPREVISTO("Imprevisto");
 
 	private String descricaoCategoriaGasto;

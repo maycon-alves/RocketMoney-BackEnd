@@ -2,7 +2,6 @@ package br.com.fiap.rocketMoney;
 
 import java.io.Serializable;
 
-import br.com.fiap.rocketMoney.Enums.CategoriaGastoEnum;
 import br.com.fiap.rocketMoney.Enums.ModalidadeFormaPagmentoEnum;
 
 public class GastoMensal extends Gasto implements Serializable {
@@ -20,16 +19,14 @@ public class GastoMensal extends Gasto implements Serializable {
 
 	}
 
-	public GastoMensal(String idGasto, Double valorGasto, String descricaoGasto, CategoriaGastoEnum categoriaGasto,
-			String dataCompra, String quantidadeParcela, String apelidoFormaPagamentoUtilizado,
+	public GastoMensal(String dataCompra, String quantidadeParcela, String apelidoFormaPagamentoUtilizado,
 			ModalidadeFormaPagmentoEnum modalidade) {
-		super(idGasto, valorGasto, descricaoGasto, categoriaGasto);
 		this.dataCompra = dataCompra;
 		this.quantidadeParcela = quantidadeParcela;
 		this.apelidoFormaPagamentoUtilizado = apelidoFormaPagamentoUtilizado;
 		this.modalidade = modalidade;
 	}
-
+	
 	public String getDataCompra() {
 		return dataCompra;
 	}
@@ -66,7 +63,7 @@ public class GastoMensal extends Gasto implements Serializable {
 	public String toString() {
 		return "GastoMensal [dataCompra=" + dataCompra + ", quantidadeParcela=" + quantidadeParcela
 				+ ", apelidoFormaPagamentoUtilizado=" + apelidoFormaPagamentoUtilizado + ", modalidade=" + modalidade
-				+ "]";
+				+ ", " + super.toString() + "]";
 	}
 
 }

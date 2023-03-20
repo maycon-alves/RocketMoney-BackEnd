@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author Equipe RocketMoney | Maycon Alves
  *
  */
-public class Pessoa implements Serializable {
+public abstract class Pessoa implements Serializable {
 	/**
 	 * esta classe e um javabean
 	 */
@@ -50,7 +50,7 @@ public class Pessoa implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Pessoa [cpf=" + cpf + ", nome=" + nome + "]";
+		return "cpf=" + cpf + ", nome=" + nome;
 	}
 
 }

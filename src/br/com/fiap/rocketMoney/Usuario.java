@@ -85,7 +85,7 @@ public class Usuario extends Pessoa implements Serializable {
 	@Override
 	public String toString() {
 		return "Usuario [senha=" + senha + ", apelidoUsuario=" + apelidoUsuario + ", tipoPerfilInvestidor="
-				+ tipoPerfilInvestidor + ", tipoFaturamento=" + tipoFaturamento + "]";
+				+ tipoPerfilInvestidor + ", tipoFaturamento=" + tipoFaturamento + ", " + super.toString() + "]";
 	}
 
 }
