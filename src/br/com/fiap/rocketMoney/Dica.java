@@ -3,21 +3,20 @@ package br.com.fiap.rocketMoney;
 import java.io.Serializable;
 
 public class Dica implements Serializable {
-	
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 4L;
-	
-	
+
 	private String idDica;
 	private String descrcaoDica;
 	private String featPrazo;
 	private String featPerfilInvestidor;
 	private String featTipoFaturamento;
-	
+
 	public Dica() {
-		
+
 	}
 
 	public Dica(String idDica, String descrcaoDica, String featPrazo, String featPerfilInvestidor,
@@ -68,7 +67,12 @@ public class Dica implements Serializable {
 	public void setFeatTipoFaturamento(String featTipoFaturamento) {
 		this.featTipoFaturamento = featTipoFaturamento;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Dica [idDica=" + idDica + ", descrcaoDica=" + descrcaoDica + ", featPrazo=" + featPrazo
+				+ ", featPerfilInvestidor=" + featPerfilInvestidor + ", featTipoFaturamento=" + featTipoFaturamento
+				+ "]";
+	}
+
 }
