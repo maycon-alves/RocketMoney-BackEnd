@@ -8,7 +8,7 @@ package br.com.fiap.rocketMoney.Enums;
  *
  */
 public enum TipoPerfilInvestidorEnum {
-	CONSERVADOR("Conservador"), MODERADO("Moderado"), EXPERIENTE("Experiente");
+	CONSERVADOR("Conservador"), MODERADO("Moderado"), EXPERIENTE("Experiente"), NAO_INFORMADO("Nao Informado");
 
 	private String descricaoPerfil;
 
