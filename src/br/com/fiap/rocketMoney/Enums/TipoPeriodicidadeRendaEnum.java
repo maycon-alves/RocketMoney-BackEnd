@@ -7,7 +7,7 @@ package br.com.fiap.rocketMoney.Enums;
  * @author Equipe RocketMoney | Maycon Alves
  *
  */
-public enum TipoFaturamentoRendaEnum {
+public enum TipoPeriodicidadeRendaEnum {
 	FIXOSEMANAL("Fixo Semanal"), FIXOMENSAL("Fixo Mensal"), FIXOANUAL("Fixo Anual"), VARIAVEL("Variavel");
 
 	private String descricaoFaturamentoRenda;
@@ -17,7 +17,7 @@ public enum TipoFaturamentoRendaEnum {
 	 * 
 	 * @param descricaoFaturamento
 	 */
-	private TipoFaturamentoRendaEnum(String descricaoFaturamentoRenda) {
+	private TipoPeriodicidadeRendaEnum(String descricaoFaturamentoRenda) {
 		this.descricaoFaturamentoRenda = descricaoFaturamentoRenda;
 	}
 

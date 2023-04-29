@@ -2,7 +2,7 @@ package br.com.fiap.rocketMoney;
 
 import java.io.Serializable;
 
-import br.com.fiap.rocketMoney.Enums.TipoFaturamentoRendaEnum;
+import br.com.fiap.rocketMoney.Enums.TipoPeriodicidadeRendaEnum;
 import br.com.fiap.rocketMoney.Enums.TipoRendaEnum;
 
 public class Renda implements Serializable {
@@ -15,14 +15,14 @@ public class Renda implements Serializable {
 	private String idRenda;
 	private float valorRenda;
 	private TipoRendaEnum tipoRenda;
-	private TipoFaturamentoRendaEnum periodicidadeRenda;
+	private TipoPeriodicidadeRendaEnum periodicidadeRenda;
 	private String descricaoRenda;
 
 	public Renda() {
 
 	}
 
-	public Renda(String idRenda, float valorRenda, TipoRendaEnum tipoRenda, TipoFaturamentoRendaEnum periodicidadeRenda,
+	public Renda(String idRenda, float valorRenda, TipoRendaEnum tipoRenda, TipoPeriodicidadeRendaEnum periodicidadeRenda,
 			String descricaoRenda) {
 		super();
 		this.idRenda = idRenda;
@@ -56,11 +56,11 @@ public class Renda implements Serializable {
 		this.tipoRenda = tipoRenda;
 	}
 
-	public TipoFaturamentoRendaEnum getPeriodicidadeRenda() {
+	public TipoPeriodicidadeRendaEnum getPeriodicidadeRenda() {
 		return periodicidadeRenda;
 	}
 
-	public void setPeriodicidadeRenda(TipoFaturamentoRendaEnum periodicidadeRenda) {
+	public void setPeriodicidadeRenda(TipoPeriodicidadeRendaEnum periodicidadeRenda) {
 		this.periodicidadeRenda = periodicidadeRenda;
 	}
 
