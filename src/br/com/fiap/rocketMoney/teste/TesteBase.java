@@ -3,6 +3,7 @@ package br.com.fiap.rocketMoney.teste;
 import java.sql.SQLException;
 
 import br.com.fiap.rocketMoney.DAO.DicaDAO;
+import br.com.fiap.rocketMoney.DAO.FormaPagamentoDAO;
 import br.com.fiap.rocketMoney.DAO.MetaDAO;
 import br.com.fiap.rocketMoney.DAO.RendaDAO;
 import br.com.fiap.rocketMoney.DAO.UsuarioDAO;
@@ -11,6 +12,7 @@ import br.com.fiap.rocketMoney.Enums.TipoPerfilInvestidorEnum;
 import br.com.fiap.rocketMoney.Enums.TipoPeriodicidadeRendaEnum;
 import br.com.fiap.rocketMoney.Enums.TipoRendaEnum;
 import br.com.fiap.rocketMoney.model.DicaModel;
+import br.com.fiap.rocketMoney.model.FormaPagamentoModel;
 import br.com.fiap.rocketMoney.model.MetaModel;
 import br.com.fiap.rocketMoney.model.RendaModel;
 import br.com.fiap.rocketMoney.model.UsuarioModel;
@@ -23,13 +25,14 @@ public class TesteBase {
 		UsuarioDAO daoUsuario = new UsuarioDAO();
 		RendaDAO daoRenda = new RendaDAO();
 		MetaDAO daoMeta = new MetaDAO();
+		FormaPagamentoDAO daoFormaPagamento = new FormaPagamentoDAO();
 
 		DicaModel dicaConservador = new DicaModel("4", "Invista", "MEDIO", "MODERADO", "Fixo");
 		UsuarioModel usuario = new UsuarioModel("55555555555","michelinha","9874","michelan",TipoPerfilInvestidorEnum.MODERADO,TipoFaturamentoEnum.FIXO_MENSAL);
 		RendaModel renda = new RendaModel("1", (float) 5000.00, TipoRendaEnum.ATIVA ,TipoPeriodicidadeRendaEnum.FIXOMENSAL,"trabalho na companhia xpto", usuario);
 		RendaModel rendaupdate = new RendaModel("8", (float) 5000.00, TipoRendaEnum.ATIVA ,TipoPeriodicidadeRendaEnum.FIXOMENSAL,"trabalho na companhia xpto", usuario);
 		MetaModel meta = new MetaModel ("meta-03", (float) 10000.50, (float) 1000.00, "30/04/2024", "comprar um novo celular", "Curto", usuario);
-		
+		FormaPagamentoModel formaPgto = new FormaPagamentoModel("005","amarelinho","credito/debito","15","5");
 		
 /*
  * Testes para clase DicaDAO
@@ -58,11 +61,21 @@ public class TesteBase {
 		//daoRenda.delete("10");
 
 /*
- * Testes para clase UsuarioDAO
+ * Testes para clase MetaDAO
  */
 	
-		daoMeta.insert(meta);
-		System.out.println(daoMeta.select());
+		//daoMeta.insert(meta);
+		//System.out.println(daoMeta.select());
+
+/*
+ * Testes para clase FormaPagamentoDAO
+ */
+		
+//		System.out.println(daoFormaPagamento.select());
+//		daoFormaPagamento.insert(formaPgto);
+//		System.out.println(daoFormaPagamento.selectFormaPagamentoById(formaPgto.getIdFormaPagamento()));
+//		
+		
 		
 	}
 

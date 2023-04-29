@@ -11,11 +11,12 @@ Models
  - Gasto
  - GastoFixo
  - GastoMensal
- - FormaPagamento
+ - FormaPagamento - OK
  
  Enums
  - Usuario
  	- TipoPerfilInvestidorEnum [CONSERVADOR, MODERADO, EXPERIENTE, NAO_INFORMADO]
  	- TipoFaturamentoEnum [FIXO_SEMANAL, FIXO_MENSAL, FIXO_ANUAL, VARIAVEL, MISTO, NAO_INFORMADO]
  - Renda
- 	- 
+ 	- TipoRendaEnum [ATIVA, PASSIVA]
+ 	- TipoPeriodicidadeRendaEnum [FIXOSEMANAL, FIXOMENSAL, FIXOANUAL, VARIAVEL]
