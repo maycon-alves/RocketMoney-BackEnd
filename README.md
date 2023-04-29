@@ -6,7 +6,7 @@ Models
  - Pessoa OK
  - Usuario OK 
  - Renda - OK
- - Meta - DOING
+ - Meta - OK
  - Dica OK
  - Gasto
  - GastoFixo
