@@ -1,6 +1,6 @@
 # RocketMoney-BackEnd
 Projeto de educação financeira.
-Versão 1.0.3
+Versão 1.0.4
 
 Models
  - Pessoa OK
