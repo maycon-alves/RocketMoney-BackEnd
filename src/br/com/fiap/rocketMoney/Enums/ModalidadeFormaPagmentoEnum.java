@@ -9,7 +9,7 @@ package br.com.fiap.rocketMoney.Enums;
  */
 public enum ModalidadeFormaPagmentoEnum {
 
-	CREDITO("Cartão de Credito"), DEBITO("Cartão de Debito"), DINHEIRO("Dinheiro"), PIX("Pix"), TED("TED"), DOC("DOC");
+	CREDITO("Credito"), DEBITO("Debito"), DINHEIRO("Dinheiro"), PIX("Pix"), TED("TED"), DOC("DOC");
 
 	private String descricaoModalidadeFormaPagamento;
 

@@ -7,8 +7,8 @@ Models
  - Usuario OK 
  - Renda - OK
  - Meta - OK
- - Dica OK
- - Gasto
+ - Dica - OK
+ - Gasto - Doing
  - GastoFixo
  - GastoMensal
  - FormaPagamento - OK
@@ -20,3 +20,8 @@ Models
  - Renda
  	- TipoRendaEnum [ATIVA, PASSIVA]
  	- TipoPeriodicidadeRendaEnum [FIXOSEMANAL, FIXOMENSAL, FIXOANUAL, VARIAVEL]
+ 	
+# Issues e melhorias futuras. :bug:
+- inclusão de enums para clase FormaPagamentoDAO.
+- revisão do relacionamento entre as entidades: Gasto, GastoFixo e GastoMensal.
+- exclusão dos pacotes duplicados para adequação a arquitetura propósta.
