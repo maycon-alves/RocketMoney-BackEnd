@@ -35,7 +35,7 @@ public class RendaDAO {
 		
 	}
 	
-	public List<RendaModel> select() throws SQLException{
+	public List<RendaModel> getAll() throws SQLException{
 		List<RendaModel> rendas = new ArrayList<RendaModel>();
 		String sql = "SELECT * FROM t_renda";
 		PreparedStatement stmt = conexao.prepareStatement(sql);

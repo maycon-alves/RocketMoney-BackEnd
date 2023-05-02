@@ -81,7 +81,7 @@ public class GastoDAO {
 
 	}
 
-	public List<GastoModel> select() throws SQLException {
+	public List<GastoModel> getAll() throws SQLException {
 		List<GastoModel> gastos = new ArrayList<GastoModel>();
 		String sql = "SELECT * FROM t_gasto";
 		PreparedStatement stmt = conexao.prepareStatement(sql);

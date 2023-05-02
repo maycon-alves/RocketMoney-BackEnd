@@ -35,7 +35,7 @@ public class DicaDAO {
 	}
 
 	// Seleciona todas as dicas da tabela de dica
-	public List<DicaModel> select() throws SQLException {
+	public List<DicaModel> getAll() throws SQLException {
 
 		List<DicaModel> dicas = new ArrayList<DicaModel>();
 		String sql = "SELECT * FROM t_dica";

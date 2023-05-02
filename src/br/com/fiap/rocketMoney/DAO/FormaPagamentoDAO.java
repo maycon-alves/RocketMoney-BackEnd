@@ -33,7 +33,7 @@ public class FormaPagamentoDAO {
 		stmt.close();
 	}
 	
-	public List<FormaPagamentoModel> select() throws SQLException {
+	public List<FormaPagamentoModel> getAll() throws SQLException {
 		List<FormaPagamentoModel> formasPgto = new ArrayList<FormaPagamentoModel>();
 		String sql = "SELECT * FROM t_forma_pgto";
 		PreparedStatement stmt = conexao.prepareStatement(sql);

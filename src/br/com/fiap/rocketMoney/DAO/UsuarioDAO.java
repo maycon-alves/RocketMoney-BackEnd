@@ -38,7 +38,7 @@ public class UsuarioDAO {
 
 	}
 
-	public List<UsuarioModel> select() throws SQLException {
+	public List<UsuarioModel> getAll() throws SQLException {
 		List<UsuarioModel> usuarios = new ArrayList<UsuarioModel>();
 		String sql = "SELECT * FROM t_user";
 		PreparedStatement stmt = conexao.prepareStatement(sql);

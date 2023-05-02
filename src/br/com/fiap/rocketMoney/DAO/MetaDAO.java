@@ -36,7 +36,7 @@ public class MetaDAO {
 		stmt.close();		
 	}
 	
-	public List<MetaModel> select() throws SQLException{
+	public List<MetaModel> getAll() throws SQLException{
 		List<MetaModel> metas = new ArrayList<MetaModel>();
 		String sql = "SELECT * FROM t_meta";
 		PreparedStatement stmt = conexao.prepareStatement(sql);

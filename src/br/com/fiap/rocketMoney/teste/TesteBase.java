@@ -31,6 +31,7 @@ public class TesteBase {
 
 	public static void main(String[] args) throws SQLException {
 
+		//inicializando os objetos para conectar com o banco
 		DicaDAO daoDica = new DicaDAO();
 		UsuarioDAO daoUsuario = new UsuarioDAO();
 		RendaDAO daoRenda = new RendaDAO();
@@ -38,39 +39,48 @@ public class TesteBase {
 		FormaPagamentoDAO daoFormaPagamento = new FormaPagamentoDAO();
 		GastoDAO daoGasto = new GastoDAO();
 
+		//setando valores para os construtores
 		DicaModel dicaConservador = new DicaModel("4", "Invista", "MEDIO", "MODERADO", "Fixo");
 		UsuarioModel usuario = new UsuarioModel("55555555555","michelinha","9874","michelan",TipoPerfilInvestidorEnum.MODERADO,TipoFaturamentoEnum.FIXO_MENSAL);
 		RendaModel renda = new RendaModel("1", (float) 5000.00, TipoRendaEnum.ATIVA ,TipoPeriodicidadeRendaEnum.FIXOMENSAL,"trabalho na companhia xpto", usuario);
 		RendaModel rendaupdate = new RendaModel("8", (float) 5000.00, TipoRendaEnum.ATIVA ,TipoPeriodicidadeRendaEnum.FIXOMENSAL,"trabalho na companhia xpto", usuario);
-		MetaModel meta = new MetaModel ("meta-03", (float) 10000.50, (float) 1000.00, "30/04/2024", "comprar um novo celular", "Curto", usuario);
-		FormaPagamentoModel formaPgto = new FormaPagamentoModel("005","amarelinho","credito/debito","15","5");
+		MetaModel meta = new MetaModel ("meta-04", (float) 10000.50, (float) 1000.00, "30/04/2024", "comprar um novo celular", "Curto", usuario);
+		FormaPagamentoModel formaPgto = new FormaPagamentoModel("008","amarelinho","credito/debito","15","5");
 
 		
 		GastoModel g;
 
-		String opt = JOptionPane.showInputDialog(
-				"Agora vamos simular o cadastro de um gasto! \nDigite F caso seja um gasto Fixo ou M caso seja apenas esse Mês.");
+		String opt = JOptionPane.showInputDialog("Agora vamos simular o cadastro de um gasto! \nDigite F caso seja um gasto Fixo ou M caso seja apenas esse Mês.");
 		if (opt.equalsIgnoreCase("F")) {
 			g = new GastoFixoModel();
 		} else {
 			g = new GastoMensalModel();
 		}
 
-		g.setIdGasto("20");
-		g.setValorGasto(122.00);
-		g.setDescricaoGasto("Pizza");
-		g.setDataGasto("28/04/2023");
-		g.setTipoGasto("Mensal");
-		g.setCategoriaGasto(CategoriaGastoEnum.ALIMENTACAO);
-		g.setUsuario(usuario);
-		g.setFormaPgto(formaPgto);
+
 		
+/*
+ * caso queira insegir um gasto mensal	
+ * EX_1	
+ */
 //		g.setIdGasto("21");
 //		g.setValorGasto(800.00);
 //		g.setDescricaoGasto("convenio medico");
 //		g.setDataGasto("28/04/2023");
 //		g.setTipoGasto("Mensal");
 //		g.setCategoriaGasto(CategoriaGastoEnum.SAUDE);
+//		g.setUsuario(usuario);
+//		g.setFormaPgto(formaPgto);
+/*
+ * caso queira insegir um gasto mensal	
+ * EX_2	
+ */
+//		g.setIdGasto("20");
+//		g.setValorGasto(122.00);
+//		g.setDescricaoGasto("Pizza");
+//		g.setDataGasto("28/04/2023");
+//		g.setTipoGasto("Mensal");
+//		g.setCategoriaGasto(CategoriaGastoEnum.ALIMENTACAO);
 //		g.setUsuario(usuario);
 //		g.setFormaPgto(formaPgto);
 
@@ -85,25 +95,19 @@ public class TesteBase {
 			((GastoMensalModel) g).setModalidade(ModalidadeFormaPagmentoEnum.CREDITO);
 			((GastoMensalModel) g).setIdFormaPagamentoUtilizado("cartão roxinho");
 		}
-		//System.out.println(g.toString());
-		
-		//daoGasto.insert(g);
-		System.out.println(daoGasto.selectGastoById("21"));
-		//daoGasto.delete(daoGasto.selectGastoById("20"));
-		System.out.println(daoGasto.selectGastoById("20"));
+		//System.out.println(g.toString());	
 		
 /*
  * Testes para clase DicaDAO
  */
 		//dao.insert(dicaConservador);
-		//System.out.println(dao.select());
+		System.out.println(daoDica.getAll());
 		//System.out.println(daoDica.selectByDicaId("3"));
-	
 
 /*
  * Testes para clase UsuarioDAO
  */
-		//System.out.println(daoUsuario.select());
+		//System.out.println(daoUsuario.getAll());
 		//daoUsuario.insert(usuario);
 		//System.out.println(daoUsuario.selectUsuarioById("55555555555"));
 		
@@ -123,25 +127,27 @@ public class TesteBase {
  */
 	
 		//daoMeta.insert(meta);
-		//System.out.println(daoMeta.select());
+		//System.out.println(daoMeta.getAll());
 
 /*
  * Testes para clase FormaPagamentoDAO
  */
 		
-//		System.out.println(daoFormaPagamento.select());
+//		System.out.println(daoFormaPagamento.getAll());
 //		daoFormaPagamento.insert(formaPgto);
 //		System.out.println(daoFormaPagamento.selectFormaPagamentoById(formaPgto.getIdFormaPagamento()));
-//		
-	
-
-/*
- * Testes para clase GastoDAO
- */
-		//System.out.println(daoGasto.select());
-		//System.out.println(daoGasto.selectGastoById("10"));
 		
+/*
+ * teste para clase GastoDAO 
+ * 
+ */
+		//daoGasto.insert(g);
+		//System.out.println(daoGasto.getAll());
+		//System.out.println(daoGasto.selectGastoById("21"));
+		//daoGasto.delete(daoGasto.selectGastoById("21"));
+		//System.out.println(daoGasto.getAll());
 		
 	}
 
 }
+
