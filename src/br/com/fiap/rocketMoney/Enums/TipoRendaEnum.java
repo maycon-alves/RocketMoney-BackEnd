@@ -8,7 +8,7 @@ package br.com.fiap.rocketMoney.Enums;
  *
  */
 public enum TipoRendaEnum {
-	ATIVA("Renda Ativa"), PASSIVA("Renda Passiva");
+	ATIVA("Ativa"), PASSIVA("Passiva");
 
 	private String DescricaoTipoRenda;
 

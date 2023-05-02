@@ -8,7 +8,7 @@ package br.com.fiap.rocketMoney.Enums;
  *
  */
 public enum PeriodoVencimentoEnum {
-	DIARIA("Diária"), SEMANAL("Semanal"), QUINZENAL("Quinzenal"), MENSAL("Mensal"), ANUAL("Anual");
+	DIARIA("Diaria"), SEMANAL("Semanal"), QUINZENAL("Quinzenal"), MENSAL("Mensal"), ANUAL("Anual");
 
 	private String descricaoPeriodoVencimento;
 

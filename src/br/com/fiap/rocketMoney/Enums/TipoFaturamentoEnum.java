@@ -8,8 +8,8 @@ package br.com.fiap.rocketMoney.Enums;
  *
  */
 public enum TipoFaturamentoEnum {
-	FIXO_SEMANAL("Fixo Semanal"), FIXO_MENSAL("Fixo Mensal"), FIXO_ANUAL("Fixo Anual"), VARIAVEL("Variavel"),
-	MISTO("Misto"), NAO_INFORMADO("Nao Informado");
+	FIXO_SEMANAL("Fixo_Semanal"), FIXO_MENSAL("Fixo_Mensal"), FIXO_ANUAL("Fixo_Anual"), VARIAVEL("Variavel"),
+	MISTO("Misto"), NAO_INFORMADO("Nao_Informado");
 
 	private String descricaoFaturamento;
 
