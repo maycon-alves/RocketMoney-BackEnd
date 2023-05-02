@@ -4,7 +4,6 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-import br.com.fiap.rocketMoney.GastoMensal;
 import br.com.fiap.rocketMoney.DAO.DicaDAO;
 import br.com.fiap.rocketMoney.DAO.FormaPagamentoDAO;
 import br.com.fiap.rocketMoney.DAO.GastoDAO;
@@ -89,8 +88,8 @@ public class TesteBase {
 		//System.out.println(g.toString());
 		
 		//daoGasto.insert(g);
-		System.out.println(daoGasto.selectGastoById("20"));
-		daoGasto.delete(daoGasto.selectGastoById("20"));
+		System.out.println(daoGasto.selectGastoById("21"));
+		//daoGasto.delete(daoGasto.selectGastoById("20"));
 		System.out.println(daoGasto.selectGastoById("20"));
 		
 /*
